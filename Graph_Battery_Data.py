@@ -34,7 +34,7 @@ parser.add_argument(
     type=int,
     required=False,
     default=100,
-    choices=range(0, 100),
+    choices=range(0, 101),
     metavar="[0-100]",
 )
 parser.add_argument(
@@ -44,7 +44,7 @@ parser.add_argument(
     help="The time (in seconds) after which the script should stop recording.",
     type=int,
     required=False,
-    choices=range(0, 259200),
+    choices=range(0, 259201),
     metavar="[0-259200]",
 )
 parser.add_argument(
@@ -54,7 +54,7 @@ parser.add_argument(
     help="The desired time (in milliseconds) between measurements.",
     type=int,
     default=1000,
-    choices=range(0, 1800000),
+    choices=range(0, 1800001),
     metavar="[0-1800000]",
 )
 parser.add_argument(
