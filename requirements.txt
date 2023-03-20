@@ -1,6 +1,5 @@
 argparse
 datetime
 pathlib
-termcolor
-tqdm
 matplotlib
+rich
