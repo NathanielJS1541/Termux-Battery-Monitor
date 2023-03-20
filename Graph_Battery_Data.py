@@ -46,7 +46,7 @@ parser.add_argument(
     type=int,
     default=1000,
     choices=range(0, 1800000),
-    metvar="[0-1800000]",
+    metavar="[0-1800000]",
 )
 parser.add_argument(
     "-o",
