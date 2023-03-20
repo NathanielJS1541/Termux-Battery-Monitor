@@ -29,7 +29,7 @@ Note that the Google Play versions of Termux are now obsolete. Use F-Droid to in
 ## Running the script
 Without providing any options, the script will monitor the battery percentage until it reaches 100%. It will then write the output data to a .jpeg file using matplotlib. A list of configuration options can be seen as follows:
 ```bash
- ~#@❯  python .\Graph_Battery_Data.py -h                                                                                                                                                                                               ❮  
+ ~#@❯  python .\Graph_Battery_Data.py -h
 usage: Graph_Battery_Data.py [-h] [-p [0-100]] [-t [0-259200]] [-o OUTPUT_FILE] [-v]
 
 options:
@@ -42,3 +42,10 @@ options:
                         Path to the output .jpg file. (default: ./Battery_Statistics_2023-03-20_11-32-03.jpg)
   -v, --verbose         Print verbose messages. (default: False)
 ```
+
+## Example Outputs
+### OnePlus7 warp charging from 1% to 100%
+![OnePlus7 Warp Charge](./sample_outputs/OnePlus7.jpg)
+
+### OnePlus5 dash charging from 5% to 100%
+![OnePlus5 Dash Charge](./sample_outputs/OnePlus5.jpg)

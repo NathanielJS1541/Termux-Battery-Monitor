@@ -39,6 +39,16 @@ parser.add_argument(
     metavar="[0-259200]",
 )
 parser.add_argument(
+    "-i",
+    "--interval",
+    dest="time_interval",
+    help="The desired time (in milliseconds) between measurements.",
+    type=int,
+    default=1000,
+    choices=range(0, 1800000),
+    metvar="[0-1800000]",
+)
+parser.add_argument(
     "-o",
     "--output-file",
     dest="output_file",
@@ -122,8 +132,11 @@ with tqdm(total=100, unit="%") as progress:
             last_progress = current_progress
 
             # Wait to take next reading
-            while (datetime.now() - current_time).total_seconds() < 1:
-                time.sleep(0.1)
+            sleep_time = (
+                timedelta(milliseconds=args.time_interval)
+                - (datetime.now() - current_time)
+            ).total_seconds()
+            time.sleep(sleep_time)
 
 if args.verbose:
     cprint("[VERBOSE] Monitoring loop finished.", "blue")
