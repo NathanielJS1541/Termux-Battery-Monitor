@@ -3,7 +3,7 @@
 # -------------------------------------- Imports --------------------------------------
 
 import argparse  # argparse is used to parse command line arguments for the script
-from datetime import datetime  # datetime allows a convenient way to store timestamps
+from datetime import datetime, timedelta  # datetime is used to manipulate times
 import json  # json library is used to parse the output from "termux-battery-status"
 from pathlib import Path  # pathlib allows a convenient way to handle paths
 import subprocess  # subprocess allows running a command and capturing the output
