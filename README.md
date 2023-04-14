@@ -30,8 +30,8 @@ Note that the Google Play versions of Termux are now obsolete. Use F-Droid to in
 
 ### Install required packages
 
-- Install python (and pip) with `pkg install python`
-- With python installed, you may need to manually install `numpy` and `matplotlib`: `MATHLIB="m" pip3 install numpy matplotlib`
+- Install python (and pip) with `pkg install python python-pip`
+- Install numpy and matplotlib according to the [Termux Wiki](https://wiki.termux.com/wiki/Python): `pkg install python-numpy matplotlib`
 - Install the rest of the required packages with `pip install -r requirements.txt`
 
 ## Running the script
